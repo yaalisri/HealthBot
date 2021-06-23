@@ -5,9 +5,9 @@ const path = require("path");
 const jwt = require("jsonwebtoken");
 const rp = require("request-promise");
 const cookieParser = require('cookie-parser');
-const WEBCHAT_SECRET = "3o5qYoRxJ70.eA6pQHp7K89mNomm1jKBLMjzQnL4rsMZt_ulooVaIAs";
+const WEBCHAT_SECRET = process.env.WEBCHAT_SECRET;
 const DIRECTLINE_ENDPOINT_URI = process.env.DIRECTLINE_ENDPOINT_URI;
-const APP_SECRET = "k._EWrBH.w5mg67c5~GGG8Y4.1hYs7998y";
+const APP_SECRET = process.env.APP_SECRET;
 const directLineTokenEp = `https://${DIRECTLINE_ENDPOINT_URI || "directline.botframework.com"}/v3/directline/tokens/generate`;
 
 // Initialize the web app instance,
